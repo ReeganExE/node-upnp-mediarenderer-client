@@ -128,7 +128,8 @@ MediaRendererClient.prototype.load = function(url, options, callback) {
   }
 
   var contentType = options.contentType || 'video/mpeg'; // Default to something generic
-  var protocolInfo = 'http-get:*:' + contentType + ':*';
+  // var protocolInfo = 'http-get:*:' + contentType + ':*';
+  var protocolInfo = 'http-get:*:' + contentType + ':DLNA.ORG_OP=01;DLNA.ORG_FLAGS=01700000000000000000000000000000';
 
   var metadata = options.metadata || {};
   metadata.url = url;
